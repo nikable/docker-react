@@ -10,4 +10,6 @@ RUN npm run build
 
 # run phase
 FROM nginx
+# elastic beanstalk will map this port automatically
+EXPOSE 80
 COPY --from=0 /app/build /usr/share/nginx/html
